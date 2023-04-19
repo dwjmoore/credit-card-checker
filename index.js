@@ -42,3 +42,9 @@ const validateCred = (array) => {
 	}
 	return false;
 };
+
+const findInvalidCards = (nestedArray) => {
+	return nestedArray.filter((array) => validateCred(array) === false);
+};
+
+console.log(findInvalidCards(batch));
